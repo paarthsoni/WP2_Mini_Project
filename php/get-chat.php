@@ -15,6 +15,7 @@
                     $output .= '<div class="chat outgoing">
                                 <div class="details">
                                     <p>'. $row['msg'] .'</p>
+                                    <p style="color: black; font-weight:black;background-color:#d6d3d3; font-size:small;">'. $row['timestamp'] .'</p>
                                 </div>
                                 </div>';
                 }else{
@@ -22,6 +23,7 @@
                                 <img src="php/images/'.$row['img'].'" alt="">
                                 <div class="details">
                                     <p>'. $row['msg'] .'</p>
+                                    <p>'. $row['timestamp'] .'</p>
                                 </div>
                                 </div>';
                 }
