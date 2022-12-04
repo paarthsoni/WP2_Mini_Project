@@ -6,6 +6,7 @@
   }
 ?>
 <?php include_once "header.php"; ?>
+
 <body>
   <div class="wrapper">
     <section class="chat-area">
@@ -22,9 +23,21 @@
         <a href="users.php" class="back-icon"><i class="fas fa-arrow-left"></i></a>
         <img src="php/images/<?php echo $row['img']; ?>" alt="">
         <div class="details">
-          <span><?php echo $row['fname']. " " . $row['lname'] ?></span>
-          <p><?php echo $row['status']; ?></p>
-        </select>
+          <span>
+            <?php echo $row['fname']. " " . $row['lname'] ?>
+          </span>
+          <p>
+            <?php echo $row['status']; ?>
+          </p>
+          <form action="deletemsg.php">
+            <label for="choose_time">Chat disappear:</label>
+            <select name="time">
+              <option value="720">12 Hours</option>
+              <option value="1440">24 Hours</option>
+            </select>
+            <br>
+            <input type="submit" value="Submit">
+          </form>
         </div>
       </header>
       <div class="chat-box">
@@ -41,4 +54,5 @@
   <script src="javascript/chat.js"></script>
 
 </body>
+
 </html>
